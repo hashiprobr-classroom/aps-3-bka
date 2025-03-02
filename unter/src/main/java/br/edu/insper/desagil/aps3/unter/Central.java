@@ -19,10 +19,12 @@ public class Central {
         int tamanho = 0;
 
         for (Corrida corrida:corridas){
-            int nota = corrida.getNotaPassageiro();
-            if (nota > 0){
-                soma += nota;
-                tamanho ++;
+            if(corrida.getPassageiro().getCpf().equals(cpf)) {
+                int nota = corrida.getNotaPassageiro();
+                if (nota > 0) {
+                    soma += nota;
+                    tamanho++;
+                }
             }
         }
         return (double) soma/tamanho;
@@ -33,10 +35,12 @@ public class Central {
         int tamanho = 0;
 
         for (Corrida corrida:corridas){
-            int nota = corrida.getNotaMotorista();
-            if (nota > 0){
-                soma += nota;
-                tamanho ++;
+            if(corrida.getMotorista().getCpf().equals(cpf)) {
+                int nota = corrida.getNotaMotorista();
+                if (nota > 0) {
+                    soma += nota;
+                    tamanho++;
+                }
             }
         }
         return (double) soma/tamanho;
