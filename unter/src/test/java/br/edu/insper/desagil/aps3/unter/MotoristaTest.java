@@ -7,13 +7,12 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class MotoristaTest {
     private Motorista m;
-    private Passageiro p;
     private Corrida c;
 
     @BeforeEach
     void setUp(){
         m = new Motorista("123", "maria");
-        p = new Passageiro("321", "carlos");
+        Passageiro p = new Passageiro("321", "carlos");
         c = new Corrida(p);
     }
 
