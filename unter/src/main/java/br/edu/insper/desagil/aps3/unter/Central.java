@@ -27,7 +27,12 @@ public class Central {
                 }
             }
         }
-        return (double) soma/tamanho;
+        if (tamanho == 0){
+            return 0;
+        }
+        else {
+            return (double) soma / tamanho;
+        }
     }
 
     public double mediaMotorista(String cpf){
@@ -43,6 +48,11 @@ public class Central {
                 }
             }
         }
-        return (double) soma/tamanho;
+        if (tamanho == 0){
+            return 0;
+        }
+        else {
+            return (double) soma / tamanho;
+        }
     }
 }
